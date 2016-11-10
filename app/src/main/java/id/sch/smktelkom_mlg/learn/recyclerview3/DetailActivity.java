@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-
 import id.sch.smktelkom_mlg.learn.recyclerview3.model.Hotel;
 
 public class DetailActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Hotel hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEl);
+        Hotel hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEL);
         setTitle(hotel.judul);
         ImageView ivFoto = (ImageView) findViewById(R.id.imageFoto);
         ivFoto.setImageURI(Uri.parse(hotel.foto));
