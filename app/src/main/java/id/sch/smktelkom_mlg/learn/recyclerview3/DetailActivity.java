@@ -22,7 +22,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        Hotel hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEL);
+        Hotel hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEl);
         setTitle(hotel.judul);
         ImageView ivFoto = (ImageView) findViewById(R.id.imageFoto);
         ivFoto.setImageURI(Uri.parse(hotel.foto));
