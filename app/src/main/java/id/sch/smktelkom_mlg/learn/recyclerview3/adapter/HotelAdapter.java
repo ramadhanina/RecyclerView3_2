@@ -98,10 +98,16 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
             bDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mIHotelAdapter.doFav(getAdapterPosition());
+                    mIHotelAdapter.doDelete(getAdapterPosition());
                 }
             });
             ibFav.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mIHotelAdapter.doFav(getAdapterPosition());
+                }
+            });
+            ibShare.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mIHotelAdapter.doShare(getAdapterPosition());
